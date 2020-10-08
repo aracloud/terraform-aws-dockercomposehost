@@ -16,7 +16,7 @@ resource "aws_instance" "instance" {
   instance_type               = var.instance_type
   key_name                    = var.ssh_key_name
   security_groups             = [aws_security_group.sg.name]
-  associate_public_ip_address = true
+  associate_public_ip_address = false
   iam_instance_profile        = aws_iam_instance_profile.profile.name
 
   tags = {
